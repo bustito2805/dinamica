@@ -1,0 +1,193 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(81, 177, 145);
+}
+
+.border{
+    border:solid 1px rgb(28, 68, 55)
+}
+
+/* GRID-AREAS*/
+#grilla-areas{
+    display: grid;
+    /*Estructura grid por areas*/
+    grid-template-areas:
+    /*columnas y filas*/
+    "header header header"
+    "menu menu menu"
+    "parrafo parrafo imagen"
+    "amigo amigo imagen"
+    "pie pie pie"
+    ;
+    grid-template-columns: 4fr auto 3fr;
+    grid-template-rows: 2fr 1fr 4fr 3fr 2fr;
+    grid-column-gap 15px;
+    grid-row-gap: 15px;
+   
+  }
+
+header{
+    grid-area: header;
+    background-color: rgb(44, 99, 81);
+            
+}
+
+h1{
+    color: rgb(72, 46, 90);
+   }
+nav{
+    grid-area: menu;
+    background-color: rgb(57, 126, 103);
+    
+}
+span a{
+    margin: 20px;
+    font-size: large;
+    color: rgb(15, 41, 32);
+    padding: 25px;
+          
+}
+section p{
+    grid-area: parrafo;
+    text-align: justify;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+div{
+    grid-area: imagen;
+    background-image: url(imagenes/servicios3.jpg);
+    width: 100%;
+    background-attachment: fixed;
+     
+       } 
+
+h2 {
+        text-align: center;
+        
+    }
+
+aside{
+    grid-area: amigo;
+    width: 100%;
+    padding: 25px;
+    background-color:rgb(57, 126, 103) ;
+   
+    
+}
+
+footer{
+    grid-area: pie;
+    background-color:rgb(43, 97, 79) ;
+        
+}
+
+iframe{
+    border-radius: 5px;
+    }
+input{
+    border-radius: 5px;
+    margin: 11px;
+}
+
+
+textarea {
+    border-radius: 10px;
+    margin: 10px;
+}
+    
+
+/*--FLEX BOX*/
+
+
+.menuFlex{
+    display: flex;
+    flex-flow:wrap;
+}
+
+.headerFlex{
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: start;
+    align-items:center;
+}
+
+.asideFlex h2{
+    display: flex;
+    justify-content:stretch;
+    align-items:;
+}
+
+.footerFlex{
+    display: flex;
+    flex-flow: wrap;
+    align-items:center;
+    justify-content:space-around;
+}
+
+.imagenContacto {
+    background-image: url(imagenes/fiananzas.jpg);
+}
+
+/*RESPONSIVE DESINGN*/
+
+/*Desktop*/
+@media (min-width: 1024px){
+    body{
+        
+        background-color: #74335d;
+        background-image: linear-gradient(315deg, #813867 0%, #ebebeb 74%);
+        
+        }
+    P  { font-size: larger;
+       }
+    }
+/*Tablet */
+
+@media (min-width: 481px) and (max-width:1023px){ 
+    body{
+
+        background-color: #865d65;
+        background-image: radial-gradient(#7e3d4a 0%, #db6885 74%);
+        }
+        P  { font-size:medium ;
+        }     
+}
+
+/*Smartphone */
+@media (max-width: 480px){
+    body{
+
+        background-color: rgb(127, 121, 168);
+        }
+        P  { font-size:small ;
+        }     
+}
+
+/*DEGRADADOS*/
+
+/*TRANSICIONES*/
+.transicion {
+    transition: all 2s;
+ }
+ 
+.transicion:hover {
+    width: 100%;
+    border-color: #eec0c6;
+    background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+    }
+
+    /*TRANSFORMACIONES*/
+.escalar{
+    transform: scale(1.25,1.5);
+}
+
+
+
