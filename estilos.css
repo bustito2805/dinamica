@@ -171,23 +171,33 @@ textarea {
         }     
 }
 
-/*DEGRADADOS*/
 
 /*TRANSICIONES*/
 .transicion {
-    transition: all 2s;
+    transition: width 3s;
  }
  
 .transicion:hover {
-    width: 100%;
-    border-color: #eec0c6;
-    background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+    width: 175%;
+    background-image: url(imagenes/finanzas.jpg);
+    background-attachment: fixed;
     }
 
-    /*TRANSFORMACIONES*/
-.escalar{
-    transform: scale(1.25,1.5);
+    /*ANIMACIONES*/
+
+.tituloAnimado {
+    animation-name: titulo;
+    animation-duration: 8s;
+    animation-iteration-count: 3;
 }
 
+@keyframes titulo {
+    /*inicio*/from {
+           transform:translateX(1300px)
+    }
 
+    /*FINAL*/ to {
+            transform: translate(0);
+    }
+}
 
